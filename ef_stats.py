@@ -6,6 +6,7 @@ from reactivex import Observable, Subject, compose, throw
 from reactivex.subject.replaysubject import ReplaySubject
 
 import asyncio
+import json
 
 import ecoflow as ef
 from ecoflow import receive
@@ -140,7 +141,7 @@ async def main():
   #while "pd" not in client.diagnostics:
   #  await asyncio.sleep(0)
   await asyncio.sleep(5)
-  print(client.diagnostics)
+  print(json.dumps(client.diagnostics))
   await client.close()
 
 asyncio.run(main())

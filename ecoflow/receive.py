@@ -79,11 +79,11 @@ def _to_int_ex(div: int = 1):
 
 
 def _to_timedelta_min(d: bytes):
-    return timedelta(minutes=int.from_bytes(d, "little"))
+    return str(timedelta(minutes=int.from_bytes(d, "little")))
 
 
 def _to_timedelta_sec(d: bytes):
-    return timedelta(seconds=int.from_bytes(d, "little"))
+    return str(timedelta(seconds=int.from_bytes(d, "little")))
 
 
 def _to_utf8(d: bytes):
